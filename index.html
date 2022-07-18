@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시멘틱구조</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        a{
+            text-decoration:none;
+        }
+        header{
+            width:80%;
+            margin:0 auto;
+            background-color:black;
+            text-align:center;
+        }
+        header h1{
+            width:10%;
+            float:left;
+        }
+        header:after{
+            content:"";
+            display:block;
+            clear:both;
+        }
+        header h1 a{
+            line-height:100px;
+            display:block;
+            color:white;
+        }
+        header nav{
+            width:60%;
+            float:right;
+        }
+        header nav ul{
+            list-style:none;
+        }
+        header nav ul li{
+            width:25%;
+            float:left;
+        }
+        header nav ul:after{
+            content:"";
+            display:block;
+            clear:both;
+        }
+        header nav ul li a{
+            display:block;
+            color:white;
+            line-height:100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="#">메인로고</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">대메뉴1</a></li>
+                <li><a href="#">대메뉴2</a></li>
+                <li><a href="#">대메뉴3</a></li>
+                <li><a href="#">대메뉴4</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
