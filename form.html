@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- input type text는 정보를 입력할 수 있는 양식, placeholder는 양식창 안에 설명, name은 정보값 maxlength는 최대입력가능수-->
+<body>
+    <form action=""> <!-- action 값에 로그인완료 페이지 html을 상대경로로 입력-->
+        <fieldset>
+            <legend>회원가입</legend>
+            <p>
+                <span>이름 :</span>
+                <input type="text" placeholder="한글로 입력해 주세요" name="name" maxlength="6" required autofocus> <!-- required 필수 입력사항, autofocus 페이지 들어갔을때 마우스 커서 깜빡이는 곳 설정-->
+            </p>
+            <p>
+                <span>아이디 :</span>
+                <input type="text" placeholder="영문 및 숫자 조합만 가능" name="ID" maxlength="15" required>
+            </p>
+            <p>
+                <span>비밀번호 :</span>
+                <input type="password" placeholder="영문 및 숫자 조합만 가능" name="PW" maxlength="15" required>
+            </p>
+            <!-- password는 입력값이 가려져서 나옴-->
+            <p>
+                <span>성별 :</span>
+                <input type="radio" name="gender" id="man" checked> <!-- checked 속성값을 입력하면 속성값을 준 태그가 선택된 상태로 나옴, 보통 맨 위에있는 태그에 적용-->
+                <label for="man">남자</label>
+                <input type="radio" name="gender" id="woman">
+                <label for="woman">여자</label>
+                <input type="radio" name="gender" id="nocoment">
+                <label for="nocoment">해당없음</label>
+            </p>
+            <!-- radio는 선택할 수 있는 양식을 만듬, 단 중복선택이 안됨(꼭 name을 똑같이써야 제대로 적용), radio와 label은 항상 붙어다니고 둘을 연결시켜주는 것은 id와 for이다.-->
+            <p>
+                <span>관심사 :</span>
+                <input type="checkbox" id="fav_01" value="fav-1" name="fav-01" checked>
+                <label for="fav_01">고양이</label>
+                <input type="checkbox" id="fav_02" value="fav-2" name="fav-02">
+                <label for="fav_02">강아지</label>
+                <input type="checkbox" id="fav_03" value="fav-3" name="fav-03">
+                <label for="fav_03">토끼</label>
+                <input type="checkbox" id="fav_04" value="fav-4" name="fav-04">
+                <label for="fav_04">햄스터</label>
+            </p>
+            <!-- checkbox는 중복선택이 가능, id값을 똑같이 쓰면 한번에 체크되는 현상이 나타남, 꼭 다른 숫자로 나눠주기. value는 체크박스의 데이터값-->
+            <p>
+                <span>증명사진 :</span>
+                <input type="file" name="img_file">
+            </p>
+            <!-- file은 파일 업로드로 사용-->
+            <p>
+                <span>날짜 :</span>
+                <input type="date" name="date" min="2020-01-01" max="2022-12-31" step="1">
+            </p>
+            <!-- date는 날짜선택을 할 수 있는 태그, min은 최소값 max는 최대값 step은 규칙 -->
+            <p>
+                <span>연령대 :</span>
+                <input type="number" name="number" min="10" max="80" step="10"> 대
+            </p>
+            <p>
+                <span>선호컬러 :</span>
+                <input type="color" name="color">
+                <input type="color" name="color">
+                <input type="color" name="color">
+            </p>
+            <!-- color는 색상을 고를 수 있게 하는 태그, 쇼핑몰에서 많이 사용-->
+            <p>
+                <span>지역선택 :</span>
+                <select name="city" id="">
+                    <optgroup label="서울">
+                        <option value="gangnam-gu">강남구</option>
+                        <option value="seacho-gu">서초구</option>
+                        <option value="jung-gu">중구</option>
+                    </optgroup>
+                    <optgroup label="경기">
+                        <option value="seongnam-si">성남시</option>
+                        <option value="suwon-si">수원시</option>
+                        <option value="anyang-si">안양시</option>
+                    </optgroup>
+                </select>
+            </p>
+            <!-- 지역을 선택하는 태그는 input이 아님. select와 option으로 이루어짐 option에 value값을 꼭 넣어주기. 옵션그룹은 optgroup label로 씀-->
+            <p>
+                <span>코멘트: </span>
+                <textarea name="comment" rows="5" cols="20" placeholder="가입인사를 남겨주세요^^"></textarea>
+            </p>
+            <!-- rows는 세로길이 cols는 가로길이-->
+            <p>
+                <input type="submit" value="회원가입하기">
+                <input type="reset" value="다시작성하기">
+            </p>
+            <!-- submit는 전송버튼, reset은 작성됐던거 리셋-->
+        </fieldset>
+    </form>
+</body>
+</html>

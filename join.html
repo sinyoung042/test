@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입을하세용가뤼</title>
+</head>
+<body>
+    <form action="./ssc.html">
+        <fieldset>
+            <legend>회원가입</legend>
+            <p>
+                <span>이름:</span>
+                <input type="text" name="name" placeholder="이름을 입력해주세요" maxlength="8" required autofocus>
+            </p>
+            <p>
+                <span>아이디:</span>
+                <input type="text" name="id" placeholder="영문 및 숫자 조합만 가능" maxlength="11" required>
+            </p>
+            <p>
+                <span>비밀번호:</span>
+                <input type="password" name="pw" placeholder="이름을 입력해주세요" maxlength="15" required>
+            </p>
+            <p>
+                <span>성별:</span>
+                <input type="radio" id="man" name="gender" checked>
+                <label for="man">남자</label>
+                <input type="radio" id="woman" name="gender">
+                <label for="woman">여자</label>
+                <input type="radio" id="nocoment" name="gender">
+                <label for="nocoment">해당없음</label>
+            </p>
+            <p>
+                <span>관심사:</span>
+                <input type="checkbox" id="fav-1" name="fav-1" checked>
+                <label for="fav-1">고양이</label>
+                <input type="checkbox" id="fav-2" name="fav-2">
+                <label for="fav-2">강아지</label>
+                <input type="checkbox" id="fav-3" name="fav-3">
+                <label for="fav-3">다람쥐</label>
+                <input type="checkbox" id="fav-4" name="fav-4">
+                <label for="fav-4">돌고래</label>
+            </p>
+            <p>
+                <span>증명사진:</span>
+                <input type="file">
+            </p>
+            <p>
+                <span>날짜:</span>
+                <input type="date" name="date" min="2020-01-01" max="2022-12-31" step="1">
+            </p>
+            <p>
+                <span>연령대:</span>
+                <input type="number" name="number" min="10" max="80" step="10">대
+            </p>
+            <p>
+                <span>선호컬러:</span>
+                <input type="color" name="color">
+                <input type="color" name="color">
+                <input type="color" name="color">
+            </p>
+            <p>
+                <span>지역선택:</span>
+                <select name="city">
+                    <optgroup label="서울">
+                        <option value="gangnam-gu">강남구</option>
+                        <option value="seacho-gu">서초구</option>
+                        <option value="gweonjin-gu">광진구</option>
+                    </optgroup>
+                    <optgroup label="경기">
+                        <option value="osan-si">오산시</option>
+                        <option value="suwon-si">수원시</option>
+                        <option value="chunan-si">천안시</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <span>코멘트:</span>
+                <textarea placeholder="가입인사를 남겨주세용가뤼^^" rows="5" cols="40"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="회원가입하기러기">
+                <input type="reset" value="다시작성하기">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
