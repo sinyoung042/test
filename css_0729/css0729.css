@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+ul,ol,dl{
+    list-style: none;
+}
+input{
+    display: none;
+}
+
+#tab{
+    width:50%;
+    position: relative;
+    text-align: center;
+}
+#tab:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+#tab > li{
+    float: left;
+    width:50%;
+}
+#tab > li label{
+    display: block;
+    color:#fff;
+    line-height: 50px;
+    background-color: #261a77;
+}
+
+.box{
+    position: absolute;
+    left:0;
+    top:100%;
+    width:100%;
+    height: 300px;
+    z-index: 1;
+    background-color: #ffbbc6;
+}
+
+#tab input:checked ~ label{
+    background-color: #ffbbc6;
+}
+#tab input:checked ~ .box{
+    z-index: 99;
+}
