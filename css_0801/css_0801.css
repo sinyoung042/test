@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding: 0;
+}
+ul,ol,dl{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+input{
+    display: none;
+}
+html{
+    font-size: 14px;
+}
+#tab{
+    text-align: center;
+    width:40rem;
+    position: relative;
+}
+#tab:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#tab > li{
+    float: left;
+    width:20rem;
+}
+#tab > li label{
+    display: block;
+    line-height: 5rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.box{
+    position: absolute;
+    top:100%;
+    width: 100%;
+    left:0;
+    height: 30rem;
+    background-color: #c4f3ff;
+    z-index: 1;
+}
+
+#tab input:checked ~ label{
+    background-color: #ccc;
+    font-size: 1.5rem;
+    color:#4fb85b;
+}
+#tab input:checked ~ .box{
+    z-index: 99;
+}
