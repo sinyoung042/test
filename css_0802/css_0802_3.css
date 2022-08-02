@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    padding:0;
+}
+ul,ol,dl{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+#box{
+    margin:500px auto;
+    width:300px;
+    position: relative;
+    text-align: center;
+}
+#box input{
+    display: none;
+}
+#box label{
+    display: block;
+    background-color: #000;
+    color:#fff;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+#box .one{
+    position: absolute;
+    width: 100%;
+    left:0;
+    bottom: 100%;
+    overflow: hidden;
+    height: 0;
+    transition: 0.7s;
+}
+#box .one > li > a{
+    display: block;
+    background-color: #cfa0fb;
+    line-height: 50px;
+    color:#000;
+}
+
+#box input:checked ~ .one{
+    height: 250px;
+}
+#box .one li:hover > a{
+    color:#fff;
+    background-color: #000;
+}

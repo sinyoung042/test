@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#tb_tag{
+    width: 800px;
+    margin:0 auto;
+}
+caption{
+    line-height: 50px;
+    font-weight:bold;
+    font-size: 20px;
+}
+table,th,td{
+    border: 1px solid #000;
+    border-collapse: collapse;
+}

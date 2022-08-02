@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배고팡</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #tab{
+            width:600px;
+            margin: 0 auto;
+        }
+        caption{
+            line-height: 50px;
+            font-size: 18px;
+        }
+        table, th, td{
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+        th{
+            background-color: #333;
+            color:#fff;
+        }
+        .ma{
+            background-color: #ffbd22;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table id="tab">
+        <caption>저녁뭐먹지</caption>
+    
+
+    <thead>
+        <tr>
+            <th>NO</th>
+            <th>가게이름</th>
+            <th>주메뉴</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center" width="20px">1</td>
+            <td>유가네닭갈비</td>
+            <td>닭갈비</td>
+        </tr>
+        <tr>
+            <td align="center">2</td>
+            <td>본갈비</td>
+            <td rowspan="2">양념갈비</td>
+        </tr>
+        <tr>
+            <td align="center">3</td>
+            <td>굴다리돼지갈비</td>
+        </tr>
+        <tr>
+            <td align="center">4</td>
+            <td>호랑이굴</td>
+            <td>대창전골</td>
+        </tr>
+        <tr>
+            <td align="center">5</td>
+            <td class="ma">탕화쿵푸</td>
+            <td rowspan="2">마라탕</td>
+        </tr>
+        <tr>
+            <td align="center">6</td>
+            <td class="ma">라화쿵부</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td align="center" colspan="3" height="500px" valign="middle" >
+                <em>완전 맛도리</em><br>
+                먹고싶당<br>
+                집가서먹어야지<br>
+                <b>마라탕먹을거임..</b></td>
+        </tr>
+    </tfoot>
+</table>
+</body>
+</html>
