@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ol,ul,dl{
+            list-style: none;
+        }
+        dl{
+            width:800px;
+            margin:0 auto;
+        }
+        dl dt{
+            background-color: #ccc;
+            line-height: 100px;
+            font-size: 20px;
+            color:#000;
+            text-indent: 40px /*들여쓰기*/;
+            border-bottom: 1px solid #333;
+        }
+        dl dd{
+            background-color: #fff;
+            color:#262626;
+            line-height: 100px;
+            border-bottom: solid 2px #000;
+            font-size: 20px;
+        }
+        dl dd span{
+            color:red;
+            font-weight: bold;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <dl> <!--자동으로 들여쓰기? QnA같은게시판에서 많이 쓰는 태그임-->
+        <dt>공지사항인데</dt>
+        <dd>좀 <span>잘</span> 읽어라 ㅗ</dd>
+    </dl>
+    <dl>
+        <dt>자꾸 똑같은거 물어보지 말고</dt>
+        <dd>빠부야 <span>손가락</span> 없냐?</dd>
+    </dl>
+    <dl>
+        <dt>인터넷 해지하셈 걍</dt>
+        <dd>공지도 안읽는거 <span>전화나</span> 문자만하셈</dd>
+    </dl>
+    <dl>
+        <dt>빠큐</dt>
+        <dd>빠큐 머겅<span> 헤헤 </span> 집갈랭</dd>
+    </dl>
+
+    <script>
+        /**alert("빠부야"); /**알림창
+        confirm("빠부세요?"); /**브라우저 내장함수 **/
+    </script>
+</body>
+</html>

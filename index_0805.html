@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .any{
+        /**** animation-name: fadeOut;
+            animation-duration: 1s; /**몇 초 동안 할 것인지 
+            animation-delay: 3s; /**몇 초 뒤에 실행될건지 
+            animation-direction: alternate; /**반복 방향 설정
+            animation-iteration-count: infinite; /**반복 횟수
+            animation-timing-function: ease-out; /**시간 간격**/
+            position:fixed; /*기준점 무조건 브라우저*/
+            width:200px;
+            height:200px;
+            background:linear-gradient(50deg, #333, #fff);
+            border-radius: 50%;/*50%를 주면 정 원(동그라미)됨*/
+            top:0;
+            left:calc(50% - 100px);
+            animation: move 1s 3s infinite ease-in-out alternate;
+        }
+
+        @keyframes fadeOut{
+            0%{/**from**/
+                opacity:1;
+            }
+            100%{/**to**/
+                opacity:0;
+            }
+        }
+        @-webkit-keyframes move{
+            0%{
+                top:0;
+                transform: scale(1);
+            }
+            100%{
+                top:70%;
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="any">
+
+    </div>
+</body>
+</html>
