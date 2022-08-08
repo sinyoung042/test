@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공튀기기기기긱</title>
+    <style>
+        .test{
+            position: fixed;
+            width:100px;
+            height: 100px;
+            background: linear-gradient(50deg,red, rgb(73, 7, 7));
+            left: calc(50% - 50px);
+            border-radius: 50%;
+            top:0;
+
+            animation: ball 2s ease-in-out 3s infinite alternate;
+        }
+
+        @keyframes ball{
+            0%{
+                top:0;
+                transform: scale(1);
+            }
+            100%{
+                top:60%;
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="test"></div>
+</body>
+</html>
