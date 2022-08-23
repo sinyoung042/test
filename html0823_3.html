@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <style>
+        body.on{
+            background-color: #333;
+            color: #fff000;
+        } /*body에 addClass(class를 추가하겠다는의미)로 on이 붙으면 적용하겠다는 의미*/
+    </style>
+</head>
+<body> <!--addClass 적용하면 버튼을 눌렀을때 class="on"이 붙음-->
+    <button id="btn">배경색 변경</button>
+    왔다리갔다리
+
+    <script>
+        $(function(){
+            $('#btn').on('click',function(){
+                $('body').toggleClass('on'); //removeClass(); 클래스 없애는애, toggleClass : 클래스가 있으면없애고 없으면 넣는애.
+            });
+        });
+    </script>
+</body>
+</html>
