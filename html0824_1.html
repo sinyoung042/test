@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #top_btn{
+            position: fixed;
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+            right: 1rem;
+            bottom: 1rem;
+            background-color: #333;
+            color:#fff000;
+            border: 0;
+        }
+        .wrap section{
+            height: 100vh;
+        }
+        .wrap section:nth-child(2n){
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <button id="top_btn">TOP</button>
+    <div class="wrap">
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+    </div>
+
+    <script>
+        $(function(){
+            $('#top_btn').on('click',function(){
+                $('body,html').animate({'scrollTop':0},1000); //scrollTop은 body와 html에 들어있는 속성 중 하나임.
+            });
+        }); //$('body,html').animate({실행할 애니메이션}, 시간, function(){애니메이션 끝나고나서 할 행동});
+    </script>
+</body>
+</html>

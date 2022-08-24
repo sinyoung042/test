@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팝어버엉어업ㅇ법엉ㅂ</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .op_black{
+            display: none;
+            position: fixed;
+            top:0;
+            left:0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: #333;
+        }
+        .pop{
+            position: absolute;
+            width: 600px;
+            height: 400px;
+            left: calc(50% - 300px);
+            top: calc(50% - 200px);
+            background-color: #fff;
+        }
+        #close_btn{
+            position: absolute;
+            right: 5%;
+            top: 5%;
+            width:5em;
+            background-color: #333;
+            color:#fff;
+            line-height: 3;
+        }
+        .disB{
+            display: block !important;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">팝업버튼임</button>
+    <div class="op_black">
+        <div class="pop">
+            <p>멀바</p>
+            <button id="close_btn">닫기</button>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+            $('#btn').on('click',function(){
+                $('.op_black').addClass('disB');
+            });
+            $('#close_btn').on('click',function(){
+                $('.op_black').removeClass('disB');
+            });
+        });
+    </script>
+</body>
+</html>
