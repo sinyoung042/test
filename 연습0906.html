@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 입력받은 숫자가 10미만이고, 짝수일 경우에만 "정답입니다" 알림창 출력
+        // 그 외의 모든 경우엔 "틀렸습니다" 알림창 출력
+        // 논리연산자 (&& ||) 사용금지
+        // else if문 사용금지
+        // 중첩조건문
+
+        let num = prompt('숫자를 입력하세요',0);
+
+        if(num<10){
+            if(num%2==0){
+                alert('정답입니다');
+            }else{
+                alert('틀렸습니다');
+            }
+        }else{
+            alert('틀렸습니다');
+        }
+    </script>
+</body>
+</html>

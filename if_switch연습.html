@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p onclick="window.open('about:blank').location.href='http://www.naver.com'">클릭클릭</p>
+    <script>
+        // 유저에게 포털 검색 사이트를 입력받아, 해당 사이트로 이동하는 문장 만들기.
+        // "구글, 네이버, 다음 중 즐겨 사용하는 사이트는?"
+        // 다른 사이트로 이동하는 실행식 location.href = 'url'; -> 브라우저의 내장함수임
+        // 구글 네이버 다음 한정.
+        // 스위치문으로 짤 것.
+        // 세가지 모두 해당하지 않는 단어는 "잘못입력했습니다 세가지중 하나를 쓰세요" 알림
+
+        let site = prompt('구글, 네이버, 다음 중 즐겨 사용하는 사이트는?');
+
+        switch(site){
+            case '구글' : location.href = 'http://www.google.com';
+            break;
+
+            case '네이버' : location.href = 'http://www.naver.com';
+            break;
+
+            case '다음' : location.href = 'http://www.daum.net';
+            break;
+
+            default : alert('잘못입력했습니다. 세가지중 하나를 쓰세요');
+        }
+    </script>
+</body>
+</html>

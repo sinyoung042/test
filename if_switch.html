@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let luckyNumber = prompt('행운의 숫자를 고르세요 1 - 3',1);
+
+        // if(luckyNumber == '3'){
+        //     document.write('키보드를 획득하셨습니다');
+        // }else if(luckyNumber == '2'){
+        //     document.write('그래픽카드를 획득하셨습니다');
+        // }else if(luckyNumber == '1'){
+        //     document.write('PC를 획득하셨습니다');
+        // }else{
+        //     document.write('꽝!');
+        // }
+
+        switch(luckyNumber){
+            case '3' : document.write('키보드를 획득하셨습니다');
+            break; //문장을 탈출하는 키워드. 반드시 case가 끝나고 나면 break문이 이어서 나와야됨. break문이 없으면 다음 case까지 한번에 터짐.
+
+            case '2' : document.write('그래픽카드를 획득하셨습니다');
+            break;
+
+            case '1' : document.write('PC를 획득하셨습니다');
+            break;
+
+            default : document.write('꽝!'); //default는 break가 필요 없음. if else에서 else의 경우.
+        }
+
+    </script>
+</body>
+</html>

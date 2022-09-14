@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 서로 반대되는 조건에 사용하는 조건문
+        // else 키워드는 if 조건문과 같이 사용해야함.
+        // if의 바로 뒤에 붙여서 사용.
+
+        // 기본형
+
+        // if(조건){
+        //     조건이 부합할때 실행식;
+        // } else{
+        //     조건이 거짓일때 실행식;
+        // }
+
+        // 유저에게 ID를 입력받아 아이디가 'green' 이면
+        // '환영합니다 관리자님' 알림창 출력
+        // 그게 아니라면 ;관리자가 아닙니다' 알림창 출력.
+        // else -> 거짓이라기보다는 참이 아니라면~
+
+        let userId = prompt('아이디를 입력하세요')
+
+        if(userId === 'green'){
+            alert('환영합니다 관리자님');
+        } else{
+            alert('당신은 관리자가 아니군용');
+        }
+    </script>
+</body>
+</html>

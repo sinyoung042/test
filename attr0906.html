@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <input type="text" placeholder="영문 입력">
+    <button id="btn">검색</button>
+    <div class="wrap"></div>
+
+
+    <script>
+        $(function(){
+            $('input').on('click',function(){
+                $(this).attr('placeholder',''); //this = 방금전에 이벤트(시점)에 해당하는 애 (click, focus, mouseenter 등) 속성을 바꾸는 것
+                // attr= 태그의 속성값을 제어. 동사 메서드.
+            });
+
+            $('btn').on('click',function(){
+                let data_input = $('input').val(); //value (값)
+                // val(값), 값이 있는 애들만 쓸 수 있음. div나 a태그같이 값이 없는애들은 못씀
+                // input, select, textarea 같은 애들만 쓸 수 있음.
+                $('.wrap').html('<h2>' + data_input + '<h2>');
+            });
+        });
+    </script>
+</body>
+</html>

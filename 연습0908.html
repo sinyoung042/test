@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1부터 20사이의 숫자 중에서 홀수를 8개만 출력하기
+        // while문 사용
+        // 변수 하나로는 처리가 불가능합니다.
+        // 큰~원 안에서 도는 작은 원을 생각해 보세요.
+
+        let i = 0 // 0 ~ 7 (8개를 걸러낼놈)
+        let num = 1; // 1~ 20 (1부터 20까지 사이의 숫자를 담을놈)
+
+        while(i < 8){
+            if(num % 2 == 1 && num <= 20){
+                document.write(num + '<br/>');
+                i++;
+            }
+            num++;
+        }
+    </script>
+</body>
+</html>

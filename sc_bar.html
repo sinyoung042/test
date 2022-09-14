@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        input[type='text']{
+            width: 0;
+            height: 50px;
+            border: 0;
+            outline: none;
+            background-color: #bd3030;
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <button>벝은</button>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        let sc_bar = true;
+        
+        $(function(){
+            $('button').on('click',function(){
+                if(sc_bar){
+                    $('input').animate({'width':'200px'},600);
+                    sc_bar = false;
+                }else{
+                    $('input').animate({'width':'0'},600);
+                    sc_bar = true;
+                }
+            })
+        });
+
+    </script>
+</body>
+</html>

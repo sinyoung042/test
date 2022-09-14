@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,dl,ol{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        #wrap{
+            width: 500px;
+            height: 100vh;
+            background-color: antiquewhite;
+            position: relative;
+        }
+        #wrap input{
+            display: none;
+        }
+        #wrap label{
+            position: absolute;
+            width: 40px;
+            transition: 0.6s;
+        }
+        #wrap label span{
+            display: block;
+            width: 100%;
+            height: 5px;
+            background-color: #333;
+            margin-bottom: 10px;
+            transition: 0.6s;
+            background-color: #333;
+        }
+        #wrap label span:nth-child(1){}
+        #wrap label span:nth-child(2){}
+        #wrap label span:nth-child(3){}
+
+        #wrap ul{
+            transition: 0.6s;
+            position: absolute;
+            width: 300px;
+            background-color: #000;
+            left: -300px;
+        }
+        #wrap ul li{}
+        #wrap ul li a{
+            display: block;
+            color: #fff;
+            line-height: 80px;
+        }
+        #wrap input:checked + label{
+            left: 310px;
+        }
+        #wrap input:checked ~ ul{
+            left: 0;
+        }
+
+        #wrap input:checked + label span:nth-child(1){
+            transform: rotate(45deg);
+            margin: 20px 0 -5px 0;
+        }
+        #wrap input:checked + label span:nth-child(2){
+            display: none;
+        }
+        #wrap input:checked + label span:nth-child(3){
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+            <input type="checkbox" id="side-btn">
+            <label for="side-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul>
+                <li><a href="#">대메뉴1</a></li>
+                <li><a href="#">대메뉴2</a></li>
+                <li><a href="#">대메뉴3</a></li>
+                <li><a href="#">대메뉴4</a></li>
+                <li><a href="#">대메뉴5</a></li>
+            </ul>
+    </div>
+</body>
+</html>

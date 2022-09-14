@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if 조건문</title>
+</head>
+<body>
+    <script>
+        // if 조건문
+        // 특정 조건에 맞는 경우에만 실행문을 실행함.
+        // 실행문이 한줄일때는 중괄호 생략 가능하나,
+        // 여러문장을 실행 할 경우 반드시 중괄호로 감싸야함.
+
+        // 만약에 내가 로또 1등에 당첨된다면 저택을 사겠다.
+
+        // 기본형태
+
+        //if 만약에(로또 1등에 당첨된다면){
+            //저택을 사겠다.
+        //}
+
+        /*let walkAmount = prompt('하루에 얼마나 걷니?',0);
+
+        if(walkAmount >= 10000){
+            document.write('운동 열심히 하는구나');
+        }*/
+
+        //유저의 네임을 입력 받았을'때'만 브라우저에 '누구누구님 반갑습니다' 노출하기
+
+        let name = prompt('이름을 입력하고 싶으면 입력하세용');
+
+        if(name != ''){
+            document.write('오~이름을 입력하셨군요?'+ name +'님 반가워영^^');
+        }
+
+        // if문은 참이나, 거짓이냐를 판별하는 문장임.
+        // 변수 자체가 들어감 -> 숫자 0은 아니게됨.
+        // 단, 무엇이든 입력했단느 조건하에,
+        // 0이 아닌 모든 수는 true(참)
+        // 참값이 들어만 가면 조건색은 참이되어 if문을 실행
+        // 거짓으로 판별되는 놈들, false, 0, null, undefined,
+        // NaN(자료형은 숫자, 숫자 아닌경우 연산식 오류터질때 가장 많이 등장.)
+    </script>
+</body>
+</html>

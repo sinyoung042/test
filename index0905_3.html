@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //겹치지 않는 세가지 이상의 조건을 나타날 때 사용.
+
+        //기본형
+
+        // if(조건){
+        //     조건1이 부합할 때 실행문;
+        // } else if{
+        //     조건2가 부합할 때 실행문;
+        // } else{
+        //     모든 조건에 해당사항이 없을경우 실행문;
+        // }
+
+        //3,4,5 봄 6,7,8 여름 9,10,11 가을 12,1,2 겨울
+        //봄에 해당 할 경우 "봄봄봄 봄이와썽요~"화면에 노출
+        //여름에 해당 할 경우 "서피비치에 갈 여름이 왔어용~"화면에 노출
+        //가을에 해당 할  경우 "단풍구경 갑세~" 화면에 노출
+        //겨울에 해당 할 경우 "스노보드 타러 갈 겨울이 왔어용~"화면에 노출
+        //잘못된 달 수가 들어오면 "다시 입력해주세요. 12개월을 벗어났습니다." 알림 출력
+        //변수는 1개만 사용!
+        //if else if문 사용.
+
+        // let num = prompt('몇월이게용?',0);
+        
+        // if(num >= 3&&num <=5){
+        //     document.write('봄이 왔어용~~');
+        // } else if(num >= 6&&num<=8){
+        //     document.write('서피비치에 갈 여름이 왔어용~~');
+        // } else if(num >= 9&&num <= 11){
+        //     document.write('단풍구경 갑시당~~~');
+        // } else if(num > 12){
+        //     alert('다시 입력해주세요. 12개월을 벗어났습니다.');
+        // } else{
+        //     document.write('스노보드 타러 갈 겨울이 왔어용');
+        // }
+
+        // 유저에게 ID, PW를 입력받아 ID가 "green" 이고 PW "1234"일 경우만
+        // "관리자님 환영합니다. 알림 출력"
+        // ID만 잘못됐을경우 "관리자 ID가 잘못 되었습니다." 알림 출력
+        // PW만 잘못됐을 경우 "비밀번호를 확인해주세요" 알림출력
+        // 둘 다 잘못됐다면, "ID와 PW를 확인해주세요" 알림출력
+
+        let userId = prompt('ID를 입력해주세요');
+        let userPw = prompt('PW를 입력해주세요');
+
+        if(userId === 'green'&&userPw == 1234){
+            alert('관리자님 환영합니다.');
+        }else if(userId !== 'green'&&userPw == 1234){
+            alert('관리자 ID가 잘못 되었습니다');
+        }else if(userId === 'green'&&userPw != 1234){
+            alert('비밀번호를 확인해주세요');
+        }else{
+            alert('ID와 PW를 확인해주세요');
+        }
+    </script>
+</body>
+</html>
