@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol,dl{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        #wrap{
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+        .slide{
+            position: relative;
+        }
+        .slide ul{}
+        .slide ul li{
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .slide ul li:nth-child(1){
+            background-color: #ff9494;
+        }
+        .slide ul li:nth-child(2){
+            background-color: #ffbb1e;
+        }
+        .slide ul li:nth-child(3){
+            background-color: #75ec30;
+        }
+        .slide ul li:nth-child(4){
+            background-color: #94cfff;
+        }
+        .slide ul li:nth-child(5){
+            background-color: #bd40ea;
+        }
+
+        .slide ul li a{
+            display: block;
+            color: #fff;
+            line-height: 400px;
+            font-size: 50px;
+        }
+        button{
+            background-color: #333;
+            width: 80px;
+            line-height: 50px;
+            border: 0;
+            border-radius: 20px;
+            position: absolute;
+            top: 340px;
+            left: calc(50% - 40px);
+            color: #fff;
+        }
+        button:hover{
+            background-color: #fff;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="slide">
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>
+        <button id="btn">멈췃</button>
+    </div>
+
+    <script>
+        $(function(){
+            let count = 0;
+            let bool = true;
+
+            $('.slide ul li').eq(count).fadeIn(300);
+            function fade_inOut(){
+                count++;
+                count %= 5;
+                $('.slide ul li').eq(count).fadeIn(300).siblings().fadeOut(300);
+            }
+
+            let autoFade = setInterval(fade_inOut,2000);
+
+            $('#btn').on('click',function(){
+                if(bool === true){
+                    clearInterval(autoFade);
+                    bool = false;
+                    $('#btn').html('시작');
+                }else{
+                    autoFade = setInterval(fade_inOut,2000);
+                    bool = true;
+                    $('#btn').html('멈췃');
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>

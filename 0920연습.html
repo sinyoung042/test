@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol,dl{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        #wrap{
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+        .section{
+            position: relative;
+        }
+        .section .silde li{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .section .silde li:nth-child(1){
+            background-color: red;
+        }
+        .section .silde li:nth-child(2){
+            background-color: yellow;
+        }
+        .section .silde li:nth-child(3){
+            background-color: green;
+        }
+
+        .section .silde li a{
+            display: block;
+            color: #fff;
+            font-size: 50px;
+            line-height: 400px;
+        }
+
+        #wrap button{
+            border: 0;
+            position: absolute;
+            top: 328px;
+            width: 150px;
+            line-height: 50px;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+        }
+
+        #wrap #play{
+            left: calc(50% - 150px);
+        }
+        #wrap #stop{
+            left: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="section">
+            <ul class="silde">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+            </ul>
+        </div>
+        <button id="play">play</button>
+        <button id="stop">stop</button>
+    </div>
+
+    <script>
+        $(function(){
+
+            let count = 0;
+            let bool = true;
+
+            $('.silde li').eq(count).fadeIn(300);
+
+            function fade_inOut(){ //함수명
+                count++;
+                    count %= 3;
+
+                    $('.silde li').eq(count).fadeIn(300).siblings().fadeOut(300);
+            }
+
+            let autoFade = setInterval(fade_inOut, 1500); //함수명이 들어감.
+            
+            $('#stop').on('click',function(){
+                if(bool === true){
+                    clearInterval(autoFade) //setInterval을 멈추려면 clearInterval밖에 없어서, setInterval함수를 변수안에 담아뒀음. clearInterval사용법 자체가 변수명임.
+                    bool = false;
+                }
+            });
+
+            $('#play').on('click',function(){
+                if(bool === false){
+                    autoFade = setInterval(fade_inOut, 1500); //다시 돌릴려면 변수를 먼저 호출해줘야 돌아감. 변수까지 호출해야만 다시 멈출 수가 있음.
+                    bool = true;
+                }
+            });
+        });
+
+        
+    </script>
+</body>
+</html>

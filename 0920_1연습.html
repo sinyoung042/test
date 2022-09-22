@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol,dl{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        #container{
+            text-align: center;
+            position: relative;
+        }
+        #section{
+            width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #section ul li{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        #section ul li:nth-child(1){
+            background-color: red;
+        }
+        #section ul li:nth-child(2){
+            background-color: rgb(255, 165, 165);
+        }
+        #section ul li:nth-child(3){
+            background-color: rgb(255, 204, 0);
+        }
+        #section ul li:nth-child(4){
+            background-color: rgb(30, 217, 83);
+        }
+        #section ul li:nth-child(5){
+            background-color: rgb(0, 47, 255);
+        }
+        
+        #section ul li a{
+            display: block;
+            color: #fff;
+            font-size: 50px;
+            line-height: 400px;
+        }
+
+        #container button{
+            position: absolute;
+            top: 340px;
+            line-height: 50px;
+            width: 80px;
+            background-color: rgb(255, 255, 255, 0.3);
+            color: #fff;
+            border-radius: 10px;
+            border: 0;
+            cursor: pointer;
+        }
+        #container button:hover{
+            background-color: rgb(255, 255, 255, 0.7);
+            color: #333;
+        }
+        #container #play{
+            left: calc(50% - 90px);
+        }
+        #container #stop{
+            left: 50%;
+        }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="section">
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>
+        <button id="play">재생</button>
+        <button id="stop">일시정지</button>
+    </div>
+
+    <script>
+        $(function(){
+
+            let count = 0;
+            let bool = true;
+
+            $('#section ul li').eq(count).fadeIn(300);
+
+            function fade_inOut(){
+                count++;
+                count %= 5;
+                $('#section ul li').eq(count).fadeIn(300).siblings().fadeOut(300);
+            };
+
+            let autoPlay = setInterval(fade_inOut,1000);
+
+            $('#stop').on('click',function(){
+                if(bool === true){
+                    clearInterval(autoPlay);
+                    bool = false;
+                }
+            });
+            $('#play').on('click',function(){
+                if(bool === false){
+                    autoPlay = setInterval(fade_inOut,1000);
+                    bool = true;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
